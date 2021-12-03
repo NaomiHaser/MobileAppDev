@@ -2,3 +2,4 @@
 const { getDefaultConfig } = require('expo/metro-config');
 
 module.exports = getDefaultConfig(__dirname);
+sourceExts: ['jsx', 'js', 'ts', 'tsx', 'json']
