@@ -124,11 +124,8 @@ const styles = StyleSheet.create({
         //paddingLeft:150,
         paddingRight: 200,
         padding: 7,
-
-       // alignSelf: 'stretch',
-        //padding: 20,
-        //borderWidth: 20,
-        borderColor: 'lightsteelblue',
+        borderWidth:2,
+        borderColor: 'pink',
         //alignItems: 'center',
         borderRadius: 30,
         //width: width
@@ -165,13 +162,17 @@ const styles = StyleSheet.create({
         padding: 10,
         backgroundColor: 'lavenderblush',
         borderRadius: 30,
-        flex: 1
+        flex: 1,
+        borderWidth: 2,
+        borderColor: 'pink'
+
     },
     buttonText: {
         fontSize: 18,
         color: 'steelblue',
         textAlign:'center',
         padding:6
+        
     },
 
 

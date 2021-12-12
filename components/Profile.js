@@ -2,10 +2,14 @@ import React, { useState, useEffect } from "react";
 import { StyleSheet, Text, View, TouchableOpacity, Button, TextInput } from 'react-native';
 import UploadImage,{image} from './UploadImage';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import {useValue} from './ValueContext'
+
+
+
 
 const Profile = (props) => {
 
-    const [info, setInfo] = useState({ name: '', email: " " , pic: image });
+    const [info, setInfo] = useState({ name: '', email: " " });
     const [name, setName] = useState('');
     const [email, setEmail] = useState('')
     const [user, setUser] = useState('');
@@ -86,6 +90,11 @@ const Profile = (props) => {
             console.dir(e)
             // clear error
         }
+    }
+    const CounterDemoWithContext = () => {
+        const {currentValue} = useValue();
+        const name = currentValue.name
+        const email = currentValue.email
     }
 
 

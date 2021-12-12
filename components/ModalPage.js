@@ -16,12 +16,18 @@ const ModalPage = () => {
       >
         <View style={styles.centeredView}>
           <View style={styles.modalView}>
-            <Text style={styles.modalText}>COOL MODAL TEXT</Text>
+            <Text style={styles.modalText}>Contact Information</Text>
+            <Text style={{fontSize: 12}}>naomihaser@brandeis.edu</Text>
+            <Text style={{fontSize: 12}}>Waltham, MA</Text>
+            <Text style={{fontSize: 12,margin:10}}>COSI 153A</Text>
+
+
+
             <Pressable
               style={[styles.button, styles.buttonClose]}
               onPress={() => setModalVisible(!modalVisible)}
             >
-              <Text style={styles.textStyle}>Hide Modal</Text>
+              <Text style={styles.textStyle}>Close Modal</Text>
             </Pressable>
           </View>
         </View>
@@ -30,7 +36,7 @@ const ModalPage = () => {
         style={[styles.button, styles.buttonOpen]}
         onPress={() => setModalVisible(true)}
       >
-        <Text style={styles.textStyle}>Show Modal</Text>
+        <Text style={styles.textStyle}>Get Contact Information</Text>
       </Pressable>
     </View>
   );
@@ -45,8 +51,10 @@ const styles = StyleSheet.create({
   },
   modalView: {
     margin: 20,
-    backgroundColor: "white",
+    backgroundColor: "snow",
     borderRadius: 20,
+    borderColor: '#011a27',
+    borderWidth:2,
     padding: 35,
     alignItems: "center",
     shadowColor: "#000",
@@ -59,15 +67,16 @@ const styles = StyleSheet.create({
     elevation: 5
   },
   button: {
+    color: '#011a27',
     borderRadius: 20,
     padding: 10,
     elevation: 2
   },
   buttonOpen: {
-    backgroundColor: "#F194FF",
+    backgroundColor: '#011a27',
   },
   buttonClose: {
-    backgroundColor: "#2196F3",
+    backgroundColor: '#011a27',
   },
   textStyle: {
     color: "white",
@@ -76,7 +85,9 @@ const styles = StyleSheet.create({
   },
   modalText: {
     marginBottom: 15,
-    textAlign: "center"
+    textAlign: "center",
+    fontSize: 14,
+    
   }
 });
 

@@ -49,7 +49,7 @@ export default function Random() {
             <View>
 
 
-                <TouchableOpacity onPress={updateQuote} style={{ marginTop:30, backgroundColor: "pink", fontColor: "white", fontSize: 10,width:200, borderRadius:10}}>
+                <TouchableOpacity onPress={updateQuote} style={{ marginTop:30, backgroundColor: "lavenderblush", fontColor: "white", fontSize: 10,width:200, borderRadius:10, borderColor: 'pink', borderWidth: 2}}>
                     
                         <Text style={{ fontSize: 13, color: "navy", textAlign: 'center', padding: 5, }}>
                             Show me another quote!</Text>

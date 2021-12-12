@@ -8,6 +8,7 @@ import MyQuote from './components/MyQuote';
 import About from './components/About';
 import Random from './components/Random';
 import Profile from './components/Profile';
+import Authors from './components/Authors';
 
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
@@ -59,6 +60,20 @@ export default function App() {
             )
           }}
         />
+
+      <Tab.Screen name="Authors"
+          component={Authors}
+          options={{
+            tabBarLabel: 'Authors',
+            paddingBottom: 10,
+            contentOptions: {
+              activeTintColor: '#e91e63'
+            },
+            tabBarIcon: ({ color, size }) => (
+              <Ionicons name="pencil" color={color} size={size} />
+            )
+          }}
+        />
         <Tab.Screen name="About"
           component={About}
           options={{
@@ -98,13 +113,14 @@ const HomeScreen = ({ navigation }) => {
 
       <MyQuote />
 
+      {/* <ContextDemo /> */}
 
 
       <View style={{ flex: 1 }}>
 
       </View>
 <View styles={styles.button}>
-        <TouchableOpacity onPress={() => navigation.navigate('Random Quote')} style={{ borderRadius: 10, backgroundColor: "lavenderblush", fontColor: "white", fontSize: 10 }}>
+        <TouchableOpacity onPress={() => navigation.navigate('Random Quote')} style={{ borderRadius: 10, backgroundColor: "lavenderblush", fontColor: "white", fontSize: 10, borderWidth:2, borderColor:'pink'}}>
           <Text style={{ color: '#011a27', fontSize: 13, textAlign: 'center', paddingTop: 9, height: 35 }} > Click to generate a random quote!  {'  '} </Text>
         </TouchableOpacity>
       </View>
